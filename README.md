@@ -48,9 +48,9 @@ After installing this entirely back-end application, users interested in theoret
 
 ## Contact
 
-GitHub: [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/Darxmarx) 
+[GitHub](https://github.com/Darxmarx)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' height='40'>](https://github.com/Darxmarx) 
 <br/>
-LinkedIn: [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/ryan-feola-052892196//)
+[LinkedIn](https://www.linkedin.com/in/ryan-feola-052892196//)  [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg' alt='linkedin' height='40'>](https://www.linkedin.com/in/ryan-feola-052892196//)
 
 ## License
 
