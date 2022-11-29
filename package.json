@@ -6,7 +6,6 @@
   "description": "",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Darxmarx/social-network-api.git"
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/Darxmarx/social-network-api#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "moment": "^2.29.4",
     "mongoose": "^6.0.13"
   }
 }

@@ -2,6 +2,32 @@
 const { Schema, model, Types } = require('mongoose');
 const moment = require('moment');
 
+// set up Reaction schema
+// must be initialized before ThoughtSchema
+const ReactionSchema = new Schema(
+    {
+        reactionId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
+        },
+        reactionBody: {
+            type: String,
+            required: true,
+            maxlength: 280
+        },
+        username: {
+            type: String,
+            required: true
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            // getter method (moment) to format timestamp on query
+            get: (createdAtVal) => moment(createdAtVal).format('MM DD, YYYY [at] hh:mm')
+        }
+    }
+);
+
 // set up Thought schema
 const ThoughtSchema = new Schema(
     {
@@ -40,31 +66,6 @@ const ThoughtSchema = new Schema(
 ThoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length
 });
-
-// set up Reaction schema
-const ReactionSchema = new Schema(
-    {
-        reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId()
-        },
-        reactionBody: {
-            type: String,
-            required: true,
-            maxlength: 280
-        },
-        username: {
-            type: String,
-            required: true
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-            // getter method (moment) to format timestamp on query
-            get: (createdAtVal) => moment(createdAtVal).format('MM DD, YYYY [at] hh:mm')
-        }
-    }
-);
 
 // create Thought model using established ThoughtSchema
 const Thought = model('Thought', ThoughtSchema);
